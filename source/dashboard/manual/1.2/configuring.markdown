@@ -63,6 +63,15 @@ Once the puppet master is properly configured with a database-backed inventory, 
     method find, search
     allow dashboard
 
+Make sure that you add the above lines **before** the following section in [`auth.conf`](/guides/rest_auth_conf.html): 
+
+    # deny everything else; this ACL is not strictly necessary, but
+    # illustrates the default policy.
+    path /
+    auth any
+
+Otherwise, you will get an "Could not retrieve facts from inventory service: 403 "Forbidden"" error on the dashboard. This happens because those rules will override everything that comes after them.
+
 Then, edit Dashboard's `config/settings.yml` to set `enable_inventory_service` to `true` and point `inventory_server` and `inventory_port` to your puppet master. Restart Dashboard, and node pages should now contain lists of facts.
 
 ### Enabling the Filebucket Viewer
