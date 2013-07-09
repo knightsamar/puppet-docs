@@ -5,6 +5,7 @@ include: _index.html
 defaultnav:
   /: quick_nav.html
   /mcollective: mcollective_menu.html
+  /pe/3.0: pe30.html
   /pe/2.8: pe28.html
   /pe/2.7: pe27.html
   /pe/2.6: pe26.html
@@ -25,6 +26,7 @@ defaultnav:
   /hiera/1: hiera1.html
   /guides/deployment_guide:  deploy_guide.html
   /release_notes: release_notes.html
+  /learning: learning_nav.html
 destination: ../output
 url: "http://docs.puppetlabs.com"
 externalsources:

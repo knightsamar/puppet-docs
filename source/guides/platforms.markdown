@@ -1,14 +1,14 @@
 ---
 layout: legacy
-title: Supported Platforms
+title: Puppet Open Source » Supported Platforms
 ---
 
-[pe2requirements]: /pe/latest/install_system_requirements.html
+[pe-requirements]: /pe/latest/install_system_requirements.html
 
-Supported Platforms
+Puppet Open Source Supported Platforms
 ===================
 
-For information about Puppet Enterprise's system requirements, [see here][pe2requirements].
+This page lists supported platforms for the open source version of Puppet. For Puppet Enterprise's supported platforms visit the [PE system requirements page][pe-requirements].
 
 Please [contact Puppet Labs](http://puppetlabs.com/contact/) if you are interested in a platform not on this list.
 
@@ -95,7 +95,7 @@ Rgen is only needed if you are using Puppet ≥ 3.2 [with `parser = future` enab
 [Hiera]: https://github.com/puppetlabs/hiera
 [rgen]: http://ruby-gen.org/downloads
 
-All other prerequisite Ruby libraries should come with any standard Ruby 1.8.2+ install.  Should your OS not come with the complete standard library (or you are using a custom Ruby build), these include:
+All other prerequisite Ruby libraries should come with any standard Ruby 1.8.5+ install.  Should your OS not come with the complete standard library (or you are using a custom Ruby build), these include:
 
 * base64
 * cgi
@@ -103,7 +103,7 @@ All other prerequisite Ruby libraries should come with any standard Ruby 1.8.2+ 
 * etc
 * fileutils
 * ipaddr
-* openssl
+* openssl (>= 0.9.8o if using a 3.x Puppet master or newer)
 * strscan
 * syslog
 * uri

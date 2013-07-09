@@ -2,7 +2,11 @@
 layout: default
 title: "PE 2.8  » Compliance » Tutorial"
 subtitle: "Compliance Tutorial"
+canonical: "/pe/latest/compliance_alt.html"
 ---
+
+
+> *IMPORTANT:* The compliance workflow tools are deprecated, and have been removed in Puppet Enterprise 3.0. [See the compliance alternate workflow](./compliance_alt.html) for more details and suggestions for ways to replace compliance.
 
 This brief walkthrough shows a compliance workflow auditing the state of the following resources:
 
@@ -17,7 +21,7 @@ Morning, July 14, 2011
 
 ![tutorial_overview][]
 
-On Thursday morning, the admin notices unreviewed changes in a group of three nodes and a pair of ungrouped nodes. She checks the group first. 
+On Thursday morning, the admin notices unreviewed changes in a group of three nodes and a pair of ungrouped nodes. She checks the group first.
 
 ![tutorial_group][]
 
@@ -25,7 +29,7 @@ There, she notices that a user was completely deleted from all three nodes, and 
 
 ![tutorial_reject_user][]
 
-...and manually SSHes to the affected nodes to re-instate the account. 
+...and manually SSHes to the affected nodes to re-instate the account.
 
 ![tutorial_group_reject_user_nodes_link][]
 
@@ -41,13 +45,13 @@ Then she takes a look at the file. It looks like two nodes had the ctime and mti
 
 ![tutorial_profile_after][]
 
-That's not OK. It looks like someone was trying to resolve a DNS problem or something, but that's definitely not how she wants this machine configured. She rejects and manually reverts, and makes a note to find out what the problem they were trying to fix was. 
+That's not OK. It looks like someone was trying to resolve a DNS problem or something, but that's definitely not how she wants this machine configured. She rejects and manually reverts, and makes a note to find out what the problem they were trying to fix was.
 
-Next, the admin moves on to the individual nodes. 
+Next, the admin moves on to the individual nodes.
 
 ![tutorial_osprey][]
 
-On the osprey server, something has stopped crond, which is definitely not good, and someone has made an edit to `/etc/syslog.conf`. She rejects the cron stoppage and restarts it, then checks the diff on the syslog config: 
+On the osprey server, something has stopped crond, which is definitely not good, and someone has made an edit to `/etc/syslog.conf`. She rejects the cron stoppage and restarts it, then checks the diff on the syslog config:
 
     7c7
     < *.info;mail.none;authpriv.none;cron.none      /var/log/messages
@@ -82,6 +86,6 @@ It's an otherwise uneventful day.
 
 
 
-* * * 
+* * *
 
-- [Next: The `pe_accounts::user` Type](./accounts_user_type.html) 
+- [Next: The `pe_accounts::user` Type](./accounts_user_type.html)
